@@ -1,0 +1,14 @@
+:root{
+  --bg1: #071124;
+  --panel: #0b1630;
+  --accent: #60a5fa;
+  --muted: #9aa8d6;
+  --tile: 24px;
+  --radius: 12px;
+  --shadow: 0 8px 22px rgba(0,0,0,.4);
+  --text: #e7f0ff;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:Inter,system-ui,Arial,sans-serif;background:linear-gradient(180deg,var(--bg1),#020617);color:var(--text)}
+.app{max-width:1000px;margin:18px auto;padding:12px}
+.topbar{display:flex;align-items:center;justify-content:space-between;background:var(--panel);padding:12px;border-radius:var(--radius);box-shadow:var(--shadow);margin-bottom:12px}
