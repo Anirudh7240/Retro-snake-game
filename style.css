@@ -1,3 +1,4 @@
+
 :root{
   --bg1: #071124;
   --panel: #0b1630;
@@ -12,3 +13,26 @@
 html,body{height:100%;margin:0;font-family:Inter,system-ui,Arial,sans-serif;background:linear-gradient(180deg,var(--bg1),#020617);color:var(--text)}
 .app{max-width:1000px;margin:18px auto;padding:12px}
 .topbar{display:flex;align-items:center;justify-content:space-between;background:var(--panel);padding:12px;border-radius:var(--radius);box-shadow:var(--shadow);margin-bottom:12px}
+.topbar h1{margin:0;font-size:20px}
+.stats{display:flex;gap:14px;color:var(--accent);font-weight:600}
+.game-area{display:grid;grid-template-columns:1fr 300px;gap:14px;align-items:start}
+canvas{width:100%;height:auto;background:#000;border-radius:10px;box-shadow:var(--shadow);display:block}
+.panel{background:var(--panel);padding:14px;border-radius:12px;box-shadow:var(--shadow)}
+.panel h2{margin:0 0 8px 0}
+.power-list{display:flex;flex-wrap:wrap;gap:8px;padding:0;margin:8px 0 12px 0;list-style:none}
+.power-list li{background:#07142a;padding:6px 10px;border-radius:999px;border:1px solid rgba(255,255,255,.05);font-size:13px;color:var(--muted)}
+.dpad{display:grid;grid-template-rows:auto auto auto;place-items:center;gap:8px;margin:8px 0}
+.dpad .row{display:flex;gap:8px}
+.dbtn{background:#0f2850;border:1px solid #1d3a78;padding:10px 12px;border-radius:8px;color:var(--text);cursor:pointer;box-shadow:0 6px 14px rgba(0,0,0,.25)}
+.actions{display:flex;gap:8px;margin-top:10px}
+#btn-pause,#btn-restart,.dbtn{transition:transform .12s ease}
+#btn-pause:active,#btn-restart:active,.dbtn:active{transform:translateY(1px)}
+.footer{margin-top:12px;color:var(--muted);display:flex;justify-content:space-between;align-items:center}
+.overlay{position:fixed;inset:0;display:grid;place-items:center;background:rgba(0,0,0,.6);z-index:30}
+.overlay.hidden{display:none}
+.modal{background:var(--panel);padding:18px;border-radius:12px;box-shadow:var(--shadow);text-align:center}
+.modal-actions button{padding:8px 12px;border-radius:8px;background:#18306a;border:none;color:var(--text);cursor:pointer}
+@media (max-width:900px){
+  .game-area{grid-template-columns:1fr}
+  .panel{order:2}
+}
